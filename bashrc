@@ -54,32 +54,9 @@ alias deth="drush -y en devel_themer"
 
 
 # RVM
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+PATH=$PATH:$HOME/.rvm/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH
-
-
-# OSX
-export EDITOR='subl -w'
-alias clipboard="pbcopy"
-alias s="subl"
-alias sub="subl"
-
-
-# MACBOOK PRO
-. /Users/Andy/libs/z/z.sh
-export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5.3/bin:$PATH"
-export PATH="/Users/Andy/sdk/android-sdk/tools:$PATH"
-export PATH="/Users/Andy/sdk/android-sdk/platform-tools:$PATH"
-alias ember-docs="cd /Users/Andy/sandbox/ember-docs/website && bundle exec middleman; /Applications/Firefox.app/Contents/MacOS/firefox http://localhost:4567/"
-alias htdocs="cd /Applications/MAMP/htdocs"
-
-
-# DYI
-export DYI_PARTNER_S3_KEY="AKIAJXYKW4OP5IHGBDPQ"
-export DYI_PARTNER_S3_SECRET="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"
-export DYI_PARTNER_S3_BUCKET_NAME="dyer-ives-partners"
-
 
 
 
