@@ -7,10 +7,12 @@ alias l="ls -al"
 alias ll="ls -l"
 alias lal="ls -al"
 alias myip="ifconfig | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
-alias rm="trash-put"
-alias trash-restore="restore-trash"
 alias v="vim"
-
+if [ -a /Library/Python/2.7/site-packages/trash_cli* ]
+then
+	alias rm="trash-put"
+	alias trash-restore="restore-trash"
+fi
 
 # SHELL LINE BREAK
 
