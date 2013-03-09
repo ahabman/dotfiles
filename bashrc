@@ -13,7 +13,20 @@ alias v="vim"
 
 
 # SHELL LINE BREAK
-export PS1='\n\u:\W\$ '
+
+
+
+if [ -a ~/dotfiles/git-aware-prompt ]
+then
+	export GITAWAREPROMPT=~/dotfiles/git-aware-prompt
+	source $GITAWAREPROMPT/main.sh
+	export PS1="\n\u:\W\[$txtcyn\]\$git_branch\[$txtylw\]\$git_dirty\[$txtrst\]\$ "
+else
+	export PS1='\n\u:\W\$ '
+fi
+
+
+
 
 
 # GIT
