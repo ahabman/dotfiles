@@ -75,3 +75,26 @@ export PATH
 
 
 
+# MACBOOK BRANCH
+
+
+# OSX
+export EDITOR='subl -w'
+alias clipboard="pbcopy"
+alias s="subl"
+alias sub="subl"
+
+
+# MACBOOK PRO
+. /Users/Andy/libs/z/z.sh
+export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5.3/bin:$PATH"
+export PATH="/Users/Andy/sdk/android-sdk/tools:$PATH"
+export PATH="/Users/Andy/sdk/android-sdk/platform-tools:$PATH"
+alias ember-docs="cd /Users/Andy/sandbox/ember-docs/website && bundle exec middleman; /Applications/Firefox.pp/Contents/MacOS/firefox http://localhost:4567/"
+alias htdocs="cd /Applications/MAMP/htdocs"
+
+
+# DYI
+export DYI_PARTNER_S3_KEY="AKIAJXYKW4OP5IHGBDPQ"
+export DYI_PARTNER_S3_SECRET="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"
+export DYI_PARTNER_S3_BUCKET_NAME="dyer-ives-partners"
