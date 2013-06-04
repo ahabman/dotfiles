@@ -90,8 +90,11 @@ alias sub="subl"
 export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5.3/bin:$PATH"
 export PATH="/Users/Andy/sdk/android-sdk/tools:$PATH"
 export PATH="/Users/Andy/sdk/android-sdk/platform-tools:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 alias ember-docs="cd /Users/Andy/sandbox/ember-docs/website && bundle exec middleman; /Applications/Firefox.pp/Contents/MacOS/firefox http://localhost:4567/"
 alias htdocs="cd /Applications/MAMP/htdocs"
+alias mysql-local="/usr/local/Cellar/mysql/5.5.25a/bin/mysql"
+alias idev="rsync -rv /Users/Andy/Documents/Steelcase/idea-book/ideabook-html/wp-content/themes/ideabook/* voxvps:/srv/www/ideabook-dev/wp-content/themes/ideabook"
 
 
 # DYI
