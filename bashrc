@@ -34,6 +34,7 @@ fi
 # GIT
 alias gaa="git add -A"
 alias gcam="git commit -am"
+alias gcm="git commit -m"
 alias gb="git branch"
 alias gd="git diff"
 alias gk="gitk --all"
