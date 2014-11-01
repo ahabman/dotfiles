@@ -1,13 +1,8 @@
-
-
-
-
 # SHELL
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias gti="git"
 alias l="ls -alp"
 alias l1="ls -1p"
 alias ll="ls -lp"
@@ -35,12 +30,13 @@ fi
 
 
 
-
-
 # GIT
+alias gti="git"
 alias gaa="git add -A"
+alias gau="git add -u"
 alias gcam="git commit -am"
 alias gcm="git commit -m"
+alias gco="git checkout"
 alias gb="git branch"
 alias gd="git diff"
 alias gk="gitk --all"
@@ -75,13 +71,6 @@ alias ddth="drush -y dis devel_themer"
 alias deth="drush -y en devel_themer"
 
 
-# RVM
-PATH=$PATH:$HOME/.rvm/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export PATH
-
-
-
 # MACBOOK BRANCH
 
 
@@ -96,13 +85,12 @@ alias md="/usr/local/Markdown.pl"
 # MACBOOK PRO
 . /Users/Andy/libs/z/z.sh
 source ~/git-completion.bash
-export PATH="/usr/local/sbin:/Users/Andy/sdk/android-sdk/tools:/Users/Andy/sdk/android-sdk/platform-tools:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/Users/Andy/sdk/android-sdk/tools:/Users/Andy/sdk/android-sdk/platform-tools:$PATH"
 alias ember-docs="cd /Users/Andy/sandbox/ember-docs/website && bundle exec middleman; /Applications/Firefox.pp/Contents/MacOS/firefox http://localhost:4567/"
 alias htdocs="cd /Applications/MAMP/htdocs"
 alias mysql-local="/usr/local/Cellar/mysql/5.5.25a/bin/mysql"
 alias idev="rsync -rv /Users/Andy/Documents/Steelcase/idea-book/ideabook-html/wp-content/themes/ideabook/* voxvps:/srv/www/ideabook-dev/wp-content/themes/ideabook"
 
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 [ $SHLVL -eq 1 ] && eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
+
+source $HOME/.rvm/scripts/rvm
