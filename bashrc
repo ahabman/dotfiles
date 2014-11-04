@@ -9,28 +9,17 @@ alias ll="ls -lp"
 alias lal="ls -alp"
 alias myip="ifconfig | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
 alias v="vim"
-if [ -a /Library/Python/2.7/site-packages/trash_cli* ]
-then
-	alias rm="trash-put"
-	alias trash-restore="restore-trash"
-fi
-
-# SHELL LINE BREAK
-
-
-
-if [ -a ~/dotfiles/git-aware-prompt ]
-then
-	export GITAWAREPROMPT=~/dotfiles/git-aware-prompt
-	source $GITAWAREPROMPT/main.sh
-	export PS1="\n\u:\W\[$txtcyn\]\$git_branch\[$txtylw\]\$git_dirty\[$txtrst\]\$ "
-else
-	export PS1='\n\u:\W\$ '
-fi
-
-
 
 # GIT
+if [ -a ~/dotfiles/git-aware-prompt ]
+then
+  export GITAWAREPROMPT=~/dotfiles/git-aware-prompt
+  source $GITAWAREPROMPT/main.sh
+  export PS1="\n\u:\W\[$txtcyn\]\$git_branch\[$txtylw\]\$git_dirty\[$txtrst\]\$ "
+else
+  export PS1='\n\u:\W\$ '
+fi
+
 alias gti="git"
 alias gaa="git add -A"
 alias gau="git add -u"
@@ -91,6 +80,5 @@ alias htdocs="cd /Applications/MAMP/htdocs"
 alias mysql-local="/usr/local/Cellar/mysql/5.5.25a/bin/mysql"
 alias idev="rsync -rv /Users/Andy/Documents/Steelcase/idea-book/ideabook-html/wp-content/themes/ideabook/* voxvps:/srv/www/ideabook-dev/wp-content/themes/ideabook"
 
-[ $SHLVL -eq 1 ] && eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
 source $HOME/.rvm/scripts/rvm
