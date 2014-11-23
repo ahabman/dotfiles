@@ -3,6 +3,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias d="docker"
+alias gti="git"
 alias l="ls -alp"
 alias l1="ls -1p"
 alias ll="ls -lp"
@@ -10,7 +12,7 @@ alias lal="ls -alp"
 alias myip="ifconfig | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
 alias v="vim"
 
-# GIT
+# SHELL LINE BREAK
 if [ -a ~/dotfiles/git-aware-prompt ]
 then
   export GITAWAREPROMPT=~/dotfiles/git-aware-prompt
@@ -54,15 +56,6 @@ alias rr="bundle exec rake routes"
 alias rrg="bundle exec rake routes | grep"
 
 
-# DRUPAL
-alias d="drush -y "
-alias ddth="drush -y dis devel_themer"
-alias deth="drush -y en devel_themer"
-
-
-# MACBOOK BRANCH
-
-
 # OSX
 # export EDITOR='subl -w'
 alias clipboard="pbcopy"
@@ -72,13 +65,5 @@ alias md="/usr/local/Markdown.pl"
 
 
 # MACBOOK PRO
-. /Users/Andy/libs/z/z.sh
 source ~/git-completion.bash
-export PATH="/usr/local/bin:/usr/local/sbin:/Users/Andy/sdk/android-sdk/tools:/Users/Andy/sdk/android-sdk/platform-tools:$PATH"
-alias ember-docs="cd /Users/Andy/sandbox/ember-docs/website && bundle exec middleman; /Applications/Firefox.pp/Contents/MacOS/firefox http://localhost:4567/"
-alias htdocs="cd /Applications/MAMP/htdocs"
-alias mysql-local="/usr/local/Cellar/mysql/5.5.25a/bin/mysql"
-alias idev="rsync -rv /Users/Andy/Documents/Steelcase/idea-book/ideabook-html/wp-content/themes/ideabook/* voxvps:/srv/www/ideabook-dev/wp-content/themes/ideabook"
-
-
-source $HOME/.rvm/scripts/rvm
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
