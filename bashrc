@@ -3,6 +3,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias d="docker"
 alias gti="git"
 alias l="ls -alp"
 alias l1="ls -1p"
@@ -10,16 +11,8 @@ alias ll="ls -lp"
 alias lal="ls -alp"
 alias myip="ifconfig | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
 alias v="vim"
-if [ -a /Library/Python/2.7/site-packages/trash_cli* ]
-then
-	alias rm="trash-put"
-	alias trash-restore="restore-trash"
-fi
 
 # SHELL LINE BREAK
-
-
-
 if [ -a ~/dotfiles/git-aware-prompt ]
 then
 	export GITAWAREPROMPT=~/dotfiles/git-aware-prompt
@@ -28,9 +21,6 @@ then
 else
 	export PS1='\n\u:\W\$ '
 fi
-
-
-
 
 
 # GIT
@@ -65,16 +55,7 @@ alias rr="bundle exec rake routes"
 alias rrg="bundle exec rake routes | grep"
 
 
-# DRUPAL
-alias d="drush -y "
-alias ddth="drush -y dis devel_themer"
-alias deth="drush -y en devel_themer"
-
-
 # RVM
 PATH=$PATH:$HOME/.rvm/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH
-
-
-
