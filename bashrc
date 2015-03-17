@@ -10,6 +10,7 @@ alias l1="ls -1p"
 alias ll="ls -lp"
 alias lal="ls -alp"
 alias myip="ifconfig | grep \"inet \" | grep -v 127.0.0.1 | cut -d\  -f2"
+alias s="subl"
 alias v="vim"
 
 # SHELL LINE BREAK
@@ -30,6 +31,7 @@ alias gcm="git commit -m"
 alias gco="git checkout"
 alias gb="git branch"
 alias gd="git diff"
+alias git-show-files="git show --pretty=\"format:\" --name-only "
 alias gk="gitk --all"
 alias gl="git log"
 alias gm="git mergetool -t opendiff "
@@ -55,6 +57,12 @@ alias rdbr="rake db:rollback"
 alias rr="bundle exec rake routes"
 alias rrg="bundle exec rake routes | grep"
 
+<<<<<<< Updated upstream
+=======
+
+source ~/.git-prompt.sh
+source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
+>>>>>>> Stashed changes
 
 # OSX
 # export EDITOR='subl -w'
