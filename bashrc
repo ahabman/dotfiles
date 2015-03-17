@@ -14,14 +14,14 @@ alias s="subl"
 alias v="vim"
 
 # SHELL LINE BREAK
-if [ -a ~/dotfiles/git-aware-prompt ]
-then
-  export GITAWAREPROMPT=~/dotfiles/git-aware-prompt
-  source $GITAWAREPROMPT/main.sh
-  export PS1="\n\u:\W\[$txtcyn\]\$git_branch\[$txtylw\]\$git_dirty\[$txtrst\]\$ "
-else
-  export PS1='\n\u:\W\$ '
-fi
+# if [ -a ~/dotfiles/git-aware-prompt ]
+# then
+#   export GITAWAREPROMPT=~/dotfiles/git-aware-prompt
+#   source $GITAWAREPROMPT/main.sh
+#   export PS1="\n\u:\W\[$txtcyn\]\$git_branch\[$txtylw\]\$git_dirty\[$txtrst\]\$ "
+# else
+#   export PS1='\n\u:\W\$ '
+# fi
 
 alias gti="git"
 alias gaa="git add -A"
@@ -57,12 +57,9 @@ alias rdbr="rake db:rollback"
 alias rr="bundle exec rake routes"
 alias rrg="bundle exec rake routes | grep"
 
-<<<<<<< Updated upstream
-=======
 
-source ~/.git-prompt.sh
+# source ~/.git-prompt.sh
 source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
->>>>>>> Stashed changes
 
 # OSX
 # export EDITOR='subl -w'
@@ -73,5 +70,5 @@ alias md="/usr/local/Markdown.pl"
 
 
 # MACBOOK PRO
-source ~/git-completion.bash
+# source ~/git-completion.bash
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
