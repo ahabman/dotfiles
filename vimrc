@@ -6,6 +6,7 @@ set nocompatible
 execute pathogen#infect()
 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
+set dir=~/.vimswap//,/var/tmp//,/tmp//,.  " Store swap files in fixed location, not current directory.
 set expandtab
 set history=50		" keep 50 lines of command line history
 set ignorecase
