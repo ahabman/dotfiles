@@ -19,21 +19,25 @@ export PS1='\n\u:\W$(__git_ps1 " (%s)")\$ '
 
 # GIT
 alias gaa="git add -A"
+alias gau="git add -u"
+alias gb="git branch"
 alias gcam="git commit -am"
 alias gcm="git commit -m"
-alias gb="git branch"
+alias gco="git checkout"
 alias gd="git diff"
+alias git-show-files="git show --pretty=\"format:\" --name-only "
+alias gitlogcolor="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gk="gitk --all"
 alias gl="git log"
+alias glc="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gld="/usr/local/bin/git-log-date-commits.rb"
+alias glg="git log --graph"
+alias gls="git log --stat"
 alias gm="git mergetool -t opendiff "
 alias gp="git push origin master"
 alias gr="git remote -v"
 alias gs="git status"
-alias gld="/usr/local/bin/git-log-date-commits.rb"
-alias gitlogcolor="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias glc="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias glg="git log --graph"
-alias gls="git log --stat"
+alias gti="git"
 
 
 # FUNCTIONS
