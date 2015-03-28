@@ -49,7 +49,7 @@ alias rr="bundle exec rake routes"
 alias rrg="bundle exec rake routes | grep"
 
 source ~/.git-prompt.sh
-source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
+source ~/z/z.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
