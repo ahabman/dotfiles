@@ -38,12 +38,10 @@ alias glc="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgre
 alias glg="git log --graph"
 alias gls="git log --stat"
 
-
 # FUNCTIONS
 function mkcd(){ dir="$*"; mkdir -p "$dir" && cd "$dir";}
 function psgrep(){ ps axu | grep -v grep | grep "$@" -i --color=auto; }
 function fname(){ find . -iname "*$@*"; }
-
 
 # RAILS
 alias rdbm="rake db:migrate"
@@ -53,11 +51,6 @@ alias rrg="bundle exec rake routes | grep"
 
 source ~/.git-prompt.sh
 source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# source ~/.git-prompt.sh
 source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
 
 # OSX
@@ -67,7 +60,6 @@ alias s="subl"
 alias sub="subl"
 alias md="/usr/local/Markdown.pl"
 
-
 # MACBOOK PRO
-# source ~/git-completion.bash
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH"
