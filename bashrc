@@ -14,14 +14,8 @@ alias s="subl"
 alias v="vim"
 
 # SHELL LINE BREAK
-# if [ -a ~/dotfiles/git-aware-prompt ]
-# then
-#   export GITAWAREPROMPT=~/dotfiles/git-aware-prompt
-#   source $GITAWAREPROMPT/main.sh
-#   export PS1="\n\u:\W\[$txtcyn\]\$git_branch\[$txtylw\]\$git_dirty\[$txtrst\]\$ "
-# else
-#   export PS1='\n\u:\W\$ '
-# fi
+# export PS1='\n\u:\W\$ '
+export PS1='\n\u:\W$(__git_ps1 " (%s)")\$ '
 
 alias gti="git"
 alias gaa="git add -A"
@@ -57,6 +51,11 @@ alias rdbr="rake db:rollback"
 alias rr="bundle exec rake routes"
 alias rrg="bundle exec rake routes | grep"
 
+source ~/.git-prompt.sh
+source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
 # source ~/.git-prompt.sh
 source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
