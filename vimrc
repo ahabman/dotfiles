@@ -41,6 +41,12 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+:ca WQ wq
+:ca Wq wq
+:ca W w
+:ca Q q
+
 " normal mode alternates
 inoremap jj <Esc>
 inoremap jk <Esc>
