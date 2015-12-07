@@ -5,9 +5,11 @@ set nocompatible
 
 execute pathogen#infect()
 
+set autoread " auto reload file when edited externally
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set dir=~/.vimswap//,/var/tmp//,/tmp//,.  " Store swap files in fixed location, not current directory.
 set expandtab
+set hidden " any buffer can be hidden (keeping its changes) without first writing the buffer to a file
 set history=50		" keep 50 lines of command line history
 set ignorecase
 set incsearch		" do incremental searching
@@ -18,9 +20,11 @@ set nowritebackup
 set number
 set numberwidth=5
 set ruler		" show the cursor position all the time
+set scrolloff=7
 set shiftwidth=2
 set showcmd		" display incomplete commands
 set smartcase
+set pastetoggle=<F2>
 set tabstop=2 " Softtabs, 2 spaces
 set wrap
 
@@ -32,8 +36,16 @@ set complete=.,t
 
 let mapleader = ","
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" let NERDTreeWinPos = "right"
+
+
 " Hide search highlighting
 noremap <Leader>h :set invhls <CR>
+noremap <Leader>n :set invnumber <CR>
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
@@ -41,11 +53,29 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+" toggle cursorline and cursorcolumn
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 :ca WQ wq
 :ca Wq wq
 :ca W w
 :ca Q q
+
+
+" sublime key bindings
+" repeat indents
+" control shift bracket
+nmap <c-s-]> >>
+nmap <c-s-[> <<
+vmap <c-s-[> <gv
+vmap <c-s-]> >gv
 
 " normal mode alternates
 inoremap jj <Esc>
@@ -59,7 +89,11 @@ vmap D y'>p
 imap <C-F> <C-R>=expand("%")<CR>
 
 " Color scheme
-silent! colorscheme inori
+silent! colorscheme badwolf
+
+" CtrlP will now root itself within the directory containing .ctrlp file
+" rather than continuing up the stack to find your .git directory
+let g:ctrlp_root_markers = ['.ctrlp']
 
 " toggle between number and relativenumber
 nnoremap <Leader>rn :call ToggleNumber()<CR>
