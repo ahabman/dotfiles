@@ -64,3 +64,5 @@ alias md="/usr/local/Markdown.pl"
 # MACBOOK PRO
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
